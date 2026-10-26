@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">🔎</div>
+        <div>
+            <h2>WORD <span>SEARCH PRO</span></h2>
+            <p>Find the hidden words. Be the champion!</p>
+        </div>
+        <div class="score-box">
+            <p>SCORE</p>
+            <h2 id="score">000</h2>
+        </div>
+        <div class="score-box">
+            <p>TIME LEFT</p>
+            <h2 id="timer">04:00</h2>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="panel words-panel">
+            <h2>🎯 Find These Words</h2>
+            <p class="subtitle">Find all the hidden words!</p>
+            <ul id="wordList"></ul>
+
+            <div class="tip">
+                <h3>💡 PRO TIP</h3>
+                <p>Click the first and last letter of a hidden word.</p>
+            </div>
+        </section>
+
+        <section class="panel game-panel">
+            <div class="game-title">
+                <p>THE ULTIMATE BRAIN CHALLENGE</p>
+                <h1>WORD <span>HUNT</span></h1>
+                <p>Find words. Earn points. Beat the clock.</p>
+            </div>
+
+            <div class="difficulty-control">
+                <label for="difficultySelect">Choose Difficulty:</label>
+                <select id="difficultySelect">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+
+
+            <div id="grid" class="grid"></div>
+
+            <p id="message">Ready? Find your first word!</p>
+
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+
+            <p class="found-count">
+                WORDS FOUND: <span id="progress">0 / 8</span>
+            </p>
+        </section>
+
+        <section class="panel right-panel">
+            <div class="hero">
+                <div class="sun"></div>
+                <h2>YOUR NEXT<br><span>BIG WIN</span></h2>
+                <p>One word away!</p>
+            </div>
+
+            <div class="challenge">
+                <h2>🏆 The Challenge</h2>
+                <p>Can you find all eight words before time runs out?</p>
+                <p>⭐ Every letter earns 10 points!</p>
+            </div>
+
+            <button id="hintBtn" class="secondary">
+                ✨ Get a Hint (-5 points)
+            </button>
+
+            <button id="newGameBtn" class="primary">
+                🔄 New Game
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        WORD SEARCH PRO <span>•</span> WEB PROGRAMMING MINI PROJECT
+    </footer>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-box">
+            <h1 id="resultTitle">🏆 Amazing!</h1>
+            <p id="resultText"></p>
+            <h2>Final Score: <span id="finalScore">0</span></h2>
+            <button id="playAgainBtn" class="primary">
+                Play Again ↗
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

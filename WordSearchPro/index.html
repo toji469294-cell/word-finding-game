@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Search Pro | Ultimate Edition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Word Search Pro home">
+      <span class="brand-icon">⌕</span>
+      <span><strong>WORD <i>SEARCH</i> PRO</strong><small>Find the hidden words. Own the challenge.</small></span>
+    </a>
+    <div class="top-stats">
+      <div class="stat-card"><span class="stat-icon gold">★</span><div><small>SCORE</small><strong id="score">000</strong></div></div>
+      <div class="stat-card"><span class="stat-icon cyan">◷</span><div><small>TIME LEFT</small><strong id="timer">04:00</strong></div></div>
+      <div class="stat-card"><span class="stat-icon green">◎</span><div><small>WORDS FOUND</small><strong id="progress">0 / 8</strong></div></div>
+    </div>
+    <button class="icon-button" id="soundBtn" title="Toggle sound effects" aria-label="Toggle sound">♫</button>
+  </header>
+
+  <main class="layout">
+    <aside class="panel word-panel">
+      <div class="panel-heading"><span class="heading-symbol">☷</span><div><h2>Find the words</h2><p>Eight words are waiting for you</p></div></div>
+      <div class="word-progress"><span id="progressText">Your progress</span><strong id="progressPercent">0%</strong></div>
+      <div class="progress-track"><span id="progressBar"></span></div>
+      <ul id="wordList" class="word-list"></ul>
+      <div class="tip-box"><span class="tip-icon">✦</span><div><strong>PRO TIP</strong><p>Words can run horizontally, vertically or diagonally. Click the first and last letter.</p></div></div>
+    </aside>
+
+    <section class="panel game-panel">
+      <div class="game-heading">
+        <div><span class="eyebrow">DAILY BRAIN BOOST</span><h1>WORD <span>HUNT</span></h1><p>Sharpen your focus, one word at a time.</p></div>
+        <div class="level-pill"><span class="pulse"></span> EASY MODE</div>
+      </div>
+      <div id="grid" class="letter-grid" aria-label="Word search letter grid"></div>
+      <div class="grid-footer"><span><span class="live-dot"></span> GAME LIVE</span><span id="selectionHint">Select a word on the grid</span></div>
+    </section>
+
+    <aside class="panel side-panel">
+      <div class="scene-card">
+        <div class="scene-sun"></div><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+        <div class="scene-copy"><span>YOUR NEXT</span><strong>BIG WIN</strong><small>is one word away.</small></div>
+      </div>
+      <div class="challenge-card">
+        <div class="challenge-icon">♛</div><span class="eyebrow">THE CHALLENGE</span>
+        <h3>Can you find them all?</h3>
+        <p>Beat the clock and build your score. Every word counts.</p>
+        <div class="mini-metrics"><div><strong>08</strong><small>HIDDEN WORDS</small></div><div><strong>04:00</strong><small>TIME LIMIT</small></div></div>
+      </div>
+      <button class="primary-button" id="newGameBtn"><span>⟳</span> New Game</button>
+      <button class="secondary-button" id="hintBtn">✦ Get a hint <small>(-5 points)</small></button>
+    </aside>
+  </main>
+
+  <footer class="footer"><span>WORD SEARCH PRO <b>•</b> MINI PROJECT</span><span>Made for curious minds <span class="heart">♥</span></span></footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card"><div class="modal-sparkle">✦</div><p class="eyebrow">CHALLENGE COMPLETE</p><h2 id="modalTitle">Amazing work!</h2><p id="modalMessage">You found all the hidden words.</p><div class="final-score"><small>FINAL SCORE</small><strong id="finalScore">000</strong></div><button class="primary-button" id="playAgainBtn">Play Again ↗</button></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
